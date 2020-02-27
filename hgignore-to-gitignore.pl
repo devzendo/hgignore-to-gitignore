@@ -39,7 +39,7 @@ while (<$hfh>) {
     next;
   }
 
-  if ($line =~ /^((?:\S|\\#)+)(\s*#.*)?$/) {
+  if ($line =~ /^((?:\S|\\#)+)(\s*#.*)?\s*$/) {
     my ($content, $comment) = ($1, $2);
     $comment ||= '';
     #print "$syntax [$content] comment [$comment]\n";
