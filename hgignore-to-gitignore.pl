@@ -28,7 +28,7 @@ while (<$hfh>) {
   $lineno++;
   my $line = $_;
   #print "line [$line]\n";
-  if ($line =~ /^\s*$/) {
+  if ($line =~ /^\s*$/ || $line =~ /^#/) {
     print $gfh "$_\n";
     next;
   }
